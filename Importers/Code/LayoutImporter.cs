@@ -84,7 +84,14 @@ namespace TomShane.Neoforce.Importers
     ////////////////////////////////////////////////////////////////////////////
     public override string GetRuntimeType(TargetPlatform targetPlatform)
     {
-      return typeof(LayoutXmlDocument).AssemblyQualifiedName;
+        if (targetPlatform == TargetPlatform.Xbox360)
+        {
+            return "TomShane.Neoforce.Controls.LayoutXmlDocument, TomShane.Neoforce.Controls.360";
+        }
+        else
+        {
+            return "TomShane.Neoforce.Controls.LayoutXmlDocument, TomShane.Neoforce.Controls";
+        }
     }
     ////////////////////////////////////////////////////////////////////////////
     

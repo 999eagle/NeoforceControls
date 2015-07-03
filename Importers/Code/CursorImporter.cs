@@ -86,7 +86,7 @@ namespace TomShane.Neoforce.Importers
     ////////////////////////////////////////////////////////////////////////////
     public override string GetRuntimeType(TargetPlatform targetPlatform)
     {
-      return typeof(CursorFile).AssemblyQualifiedName;
+        return "System.Windows.Forms.Cursor, System.Windows.Forms";
     }
     ////////////////////////////////////////////////////////////////////////////
     
