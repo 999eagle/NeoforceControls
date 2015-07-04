@@ -47,19 +47,19 @@ namespace TomShane.Neoforce.Importers
   [ContentImporter(".xml", DisplayName = "Skin - Neoforce Controls")]
   class SkinImporter: ContentImporter<SkinXmlDocument>
   {
-		#region //// Methods ///////////
-			
-		////////////////////////////////////////////////////////////////////////////
-		public override SkinXmlDocument Import(string filename, ContentImporterContext context)
+        #region //// Methods ///////////
+            
+        ////////////////////////////////////////////////////////////////////////////
+        public override SkinXmlDocument Import(string filename, ContentImporterContext context)
     {      
       SkinXmlDocument doc = new SkinXmlDocument();            
       doc.Load(filename);
 
       return doc;
     }
-		////////////////////////////////////////////////////////////////////////////
-			
-  	#endregion  
+        ////////////////////////////////////////////////////////////////////////////
+            
+    #endregion  
   }  	
   ////////////////////////////////////////////////////////////////////////////
 

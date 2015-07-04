@@ -1325,6 +1325,63 @@ namespace TomShane.Neoforce.Controls
     }
     ////////////////////////////////////////////////////////////////////////////     
 
+    public virtual void PostUpdate(GameTime gameTime)
+    {
+        if (this.components != null)
+        {
+            foreach (Component current in this.components)
+            {
+                current.PostUpdate(gameTime);
+            }
+        }
+        ControlsList controlsList = new ControlsList(this.controls);
+        if (controlsList != null)
+        {
+            foreach (Control current2 in controlsList)
+            {
+                current2.PostUpdate(gameTime);
+            }
+        }
+    }
+
+    public virtual void PreDraw(GameTime gameTime)
+    {
+        if (this.components != null)
+        {
+            foreach (Component current in this.components)
+            {
+                current.PreDraw(gameTime);
+            }
+        }
+        ControlsList controlsList = new ControlsList(this.controls);
+        if (controlsList != null)
+        {
+            foreach (Control current2 in controlsList)
+            {
+                current2.PreDraw(gameTime);
+            }
+        }
+    }
+
+    public virtual void PostDraw(GameTime gameTime)
+    {
+        if (this.components != null)
+        {
+            foreach (Component current in this.components)
+            {
+                current.PostDraw(gameTime);
+            }
+        }
+        ControlsList controlsList = new ControlsList(this.controls);
+        if (controlsList != null)
+        {
+            foreach (Control current2 in controlsList)
+            {
+                current2.PostDraw(gameTime);
+            }
+        }
+    }
+
     #endregion
 
     #region //// Input /////////////

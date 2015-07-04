@@ -51,15 +51,15 @@ namespace TomShane.Neoforce.Importers
 			
 		////////////////////////////////////////////////////////////////////////////
 		public override LayoutXmlDocument Import(string filename, ContentImporterContext context)
-    {      
-      LayoutXmlDocument doc = new LayoutXmlDocument();            
-      doc.Load(filename);
+	{      
+	  LayoutXmlDocument doc = new LayoutXmlDocument();            
+	  doc.Load(filename);
 
-      return doc;
-    }
+	  return doc;
+	}
 		////////////////////////////////////////////////////////////////////////////
 			
-  	#endregion  
+	#endregion  
   }  	
   ////////////////////////////////////////////////////////////////////////////
 
@@ -72,44 +72,44 @@ namespace TomShane.Neoforce.Importers
   class LayoutWriter:ContentTypeWriter<LayoutXmlDocument>
   {
 
-    #region //// Methods ///////////
-    
-    ////////////////////////////////////////////////////////////////////////////
-    protected override void Write(ContentWriter output, LayoutXmlDocument value)
-    {      
-      output.Write(value.InnerXml);              
-    }
-    ///////////////////////////////////////////////////////////////////////////
-    
-    ////////////////////////////////////////////////////////////////////////////
-    public override string GetRuntimeType(TargetPlatform targetPlatform)
-    {
-        if (targetPlatform == TargetPlatform.Xbox360)
-        {
-            return "TomShane.Neoforce.Controls.LayoutXmlDocument, TomShane.Neoforce.Controls.360";
-        }
-        else
-        {
-            return "TomShane.Neoforce.Controls.LayoutXmlDocument, TomShane.Neoforce.Controls";
-        }
-    }
-    ////////////////////////////////////////////////////////////////////////////
-    
-    ////////////////////////////////////////////////////////////////////////////    
-    public override string GetRuntimeReader(TargetPlatform targetPlatform)
-    {      
-      if (targetPlatform == TargetPlatform.Xbox360)
-      {
-        return "TomShane.Neoforce.Controls.LayoutReader, TomShane.Neoforce.Controls.360";
-      } 
-      else
-      {
-        return "TomShane.Neoforce.Controls.LayoutReader, TomShane.Neoforce.Controls";
-      } 
-    }      
-    ////////////////////////////////////////////////////////////////////////////
+	#region //// Methods ///////////
+	
+	////////////////////////////////////////////////////////////////////////////
+	protected override void Write(ContentWriter output, LayoutXmlDocument value)
+	{      
+	  output.Write(value.InnerXml);              
+	}
+	///////////////////////////////////////////////////////////////////////////
+	
+	////////////////////////////////////////////////////////////////////////////
+	public override string GetRuntimeType(TargetPlatform targetPlatform)
+	{
+		if (targetPlatform == TargetPlatform.Xbox360)
+		{
+			return "TomShane.Neoforce.Controls.LayoutXmlDocument, TomShane.Neoforce.Controls.360";
+		}
+		else
+		{
+			return "TomShane.Neoforce.Controls.LayoutXmlDocument, TomShane.Neoforce.Controls";
+		}
+	}
+	////////////////////////////////////////////////////////////////////////////
+	
+	////////////////////////////////////////////////////////////////////////////    
+	public override string GetRuntimeReader(TargetPlatform targetPlatform)
+	{      
+	  if (targetPlatform == TargetPlatform.Xbox360)
+	  {
+		return "TomShane.Neoforce.Controls.LayoutReader, TomShane.Neoforce.Controls.360";
+	  } 
+	  else
+	  {
+		return "TomShane.Neoforce.Controls.LayoutReader, TomShane.Neoforce.Controls";
+	  } 
+	}      
+	////////////////////////////////////////////////////////////////////////////
 
-    #endregion
+	#endregion
   } 
   ////////////////////////////////////////////////////////////////////////////
 

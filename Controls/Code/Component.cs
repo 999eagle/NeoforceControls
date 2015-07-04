@@ -98,6 +98,10 @@ namespace TomShane.Neoforce.Controls
     }
     ////////////////////////////////////////////////////////////////////////////   
 
+    protected internal virtual void PreDraw(GameTime gameTime) { }
+    protected internal virtual void PostUpdate(GameTime gameTime) { }
+    protected internal virtual void PostDraw(GameTime gameTime) { }
+
     #endregion
 
   }
